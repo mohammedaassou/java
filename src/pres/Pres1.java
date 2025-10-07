@@ -4,7 +4,7 @@ import Dao.IDao;
 import Metier.IMetier;
 import Metier.MetierImpl;
 
-public class Main {
+public class Pres1 {
     public static void main(String[] args) {
         IDao dao = new DaoImplement();
         IMetier metier = new MetierImpl(dao);
