@@ -3,15 +3,9 @@ package Metier;
 import Dao.IDao;
 
 public class MetierImpl implements IMetier {
-    private IDao dao;
-
-    public MetierImpl() {}
+    private final IDao dao;
 
     public MetierImpl(IDao dao) {
-        this.dao = dao;
-    }
-
-    public void setDao(IDao dao) {
         this.dao = dao;
     }
 
