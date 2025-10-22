@@ -1,5 +1,7 @@
 package ma.inset.productapp;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -26,6 +28,16 @@ public class ProductAppApplication implements  CommandLineRunner {
             System.out.println(p.toString());
         });
         
+
+        Product product = productRepository.findById(Long.valueOf(1)).get();
+        System.out.println("**************");
+        System.out.println(product.toString());
+        System.out.println("**************");
+
+
+        List<Product> productsList =  productRepository.findByNameContains("c");
+
+        productsList.forEach(p -> System.out.println(p.toString()));
     }
 
 }
